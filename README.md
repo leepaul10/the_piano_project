@@ -1,4 +1,4 @@
-# 🎹 YAMAHA MONTAGE M SYNTH — Gesture Piano
+# 🎹 Real-Time Hand — Gesture Piano 🎹
 
 Ever wanted to play piano without actually owning one? This project lets you do exactly that. Using just your webcam, it tracks your hand in real time and turns your finger movements into actual piano notes — no keyboard, no MIDI controller, nothing.
 
@@ -26,50 +26,49 @@ Both checks must pass for the finger to be "active" (shown as a yellow dot on sc
 
 Once a finger is active, the program checks which key the fingertip is hovering over and watches the Z-axis (depth). When your finger pushes close enough to the camera, the note plays. Pull back and it releases.
 
-The **thumb is intentionally skipped** — its movement pattern is too different to work reliably for air pressing.
-
+The **thumb is intentionally skipped** — its movement pattern is too different to work reliably for air pressing.It's geometry and range of motion differ significantly from the other fingers, making it unreliable for depth-based air pressing.
 ---
 
-## Installation
+## Installation:
 
 ```bash
 pip install opencv-python mediapipe pygame numpy
 ```
 
-That's all you need. No audio files, no extra downloads.
+That's all you need!!! No audio files, no extra downloads.
 
 ---
 
-## Running It
+## Running :
 
 ```bash
 python hand_piano.py
 ```
 
-A window titled **YAMAHA-MONTAGE-M-SYNTH** will open showing your webcam feed with the piano overlaid at the bottom.
+A window titled **YAMAHA-MONTAGE-M-SYNTH** will open showing your webcam feed with the piano.
 
-Press `Q` or `Esc` to close.
-
----
-
-## Playing Tips
-
-- Hold your hand with fingers **pointing straight up** toward the camera
-- Move your hand so a fingertip sits above the key you want
-- **Push your finger forward** (toward the camera) to trigger the note — the key will glow **green**
-- **Pull back** to release it
-- Black keys are checked before white keys, so sharps always get priority if your finger is on the boundary
-- The **red line** on screen marks the trigger zone — your fingertip has to cross it for white keys to register
+Press `Q` to close.
 
 ---
 
-## Under the Hood
+## Playing Tips:
 
-- **Camera** runs on a background thread so the main loop never waits for a frame — keeps everything smooth
-- **MediaPipe** processes a downscaled 480×240 version of the frame for speed, while the display stays at 1005×620
-- **Audio** uses 44100 Hz sample rate, 16-bit stereo, with a 512-sample buffer for low latency
-- **64 audio channels** are open simultaneously so notes never cut each other off
-- OpenCL GPU acceleration is enabled for faster frame processing
+- Hold your hand with fingers **pointing straight up** toward the camera.
+- Move your hand so a fingertip sits above the key you want.
+- **Push your finger forward** (toward the camera) to trigger the note — the key will glow **green**.
+- **Pull back** to release it.
+- Black keys are checked before white keys, so sharps always get priority if your finger is on the boundary.
+- The **red line** on screen marks the trigger zone — your fingertip has to cross it for white keys to register.
+
+---
+
+## What's Underneath the Hood?
+
+- **Camera** runs on a background thread so the main loop never waits for a frame — keeps everything smooth.
+- **MediaPipe** processes a downscaled 480×240 version of the frame for speed, while the display stays at 1005×620.
+- **Audio** uses 44100 Hz sample rate, 16-bit stereo, with a 512-sample buffer for low latency.
+- **64 audio channels** are open simultaneously so notes never cut each other off.
+- OpenCL GPU acceleration is enabled for faster frame processing.
 
 ---
 
