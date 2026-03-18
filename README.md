@@ -14,11 +14,9 @@ The piano spans **25 keys from C4 to C6**, including all the black keys (sharps 
 
 ## How the Finger Detection Works
 
-MediaPipe detects 21 landmarks on your hand every frame. For each finger, the program runs two checks:
-
+MediaPipe detects 21 landmarks on your hand every frame. For each finger, the program runs two checks.
 **1. Is the finger pointing upward?**
 It checks that the fingertip is higher on screen than the middle joint, which is higher than the knuckle. If that order is correct, the finger is considered straight.
-
 **2. Is the finger fully extended?**
 It measures the straight-line distance from the knuckle to the tip, and compares it to the distance from the knuckle to the middle joint. If the tip is at least 15% farther out, the finger isn't curled — it's open.
 
