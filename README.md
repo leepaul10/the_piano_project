@@ -73,4 +73,4 @@ Press `Q` or `Esc` to close.
 
 ---
 
-**Lee Paul Babu K** — [GitHub](https://github.com/leepaul10) · 
+**Lee Paul Babu K** — (https://github.com/leepaul10) · 
