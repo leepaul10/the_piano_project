@@ -1,0 +1,8 @@
+numpy
+mediapipe
+pygame
+mediapipe
+opencv-python
+# import time
+# import math
+# import threading
