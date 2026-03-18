@@ -1,4 +1,4 @@
-# 🎹 Real-Time Hand — Gesture Piano 🎹
+# 🎹 Real-Time Hand Gesture Piano 🎹
 
 Ever wanted to play piano without actually owning one? This project lets you do exactly that. Using just your webcam, it tracks your hand in real time and turns your finger movements into actual piano notes — no keyboard, no MIDI controller, nothing.
 
